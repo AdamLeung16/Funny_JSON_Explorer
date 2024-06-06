@@ -1,0 +1,102 @@
+#!/usr/bin/python3
+
+import argparse
+import json
+import sys
+from abc import ABC, abstractmethod
+from style import *
+from icon import *
+from component import *
+
+
+class FunnyJsonExplorer:
+    def __init__(self, style:str, icon:str, config:str=None):
+        self.json_data = None
+        self.style = self.get_style_factory(style).create_style()
+        self.icon = self.get_icon_factory(icon).create_icon()
+        self.icon.set_icons(config_path=config,icon_name=icon)
+        self.max_width = 0
+        self.root = None
+        self.print_list = []
+
+    def _load(self,file_name):
+        with open(file_name, 'r') as json_file:
+            self.json_data = json.load(json_file)
+
+    def get_max_width(self,data, level=0):
+        if isinstance(data, dict):
+            max_width = max([len(key) + self.get_max_width(value, level + 1) for key, value in data.items()], default=0)
+            return max_width + 4
+        elif isinstance(data, list):
+            max_width = max([self.get_max_width(item, level + 1) for item in data], default=0)
+            return max_width + 4
+        elif isinstance(data, str):
+            return len(data) + 4
+        return 0
+
+    def parse_json(self,data):
+        if isinstance(data, dict):
+            container = Container(self.icon,'','')
+            for key, value in data.items():
+                child = self.parse_json(value)
+                child.key = key
+                container.add(child)
+            return container
+        else:
+            return Leaf(self.icon,"",str(data))
+
+    def build(self):
+        self.max_width = self.get_max_width(self.json_data)
+        self.root = self.parse_json(self.json_data)
+        print_list = []
+        for index,child in enumerate(self.root.children):
+            is_last = index == len(self.root.children) - 1
+            print_line = child.draw(self.style,"",self.max_width,is_last)
+            print_list+=print_line
+        self.print_list = self.style.beautification(print_list)
+
+    def show(self):
+        for line in self.print_list:
+            print(line)
+
+    def get_style_factory(self, style:str):
+        if style == "tree":
+            return TreeStyleFactory()
+        elif style == "rectangle":
+            return RectangleStyleFactory()
+        else:
+            raise ValueError(f"Unknown style: {style}")
+        
+    def get_icon_factory(self, icon:str):
+        if icon == "poker":
+            return PokerIconFactory()
+        elif icon == "chess":
+            return ChessIconFactory()
+        else:
+            return OtherIconFactory()
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Process a JSON file with style and icon family options.")
+    parser.add_argument('-f', '--file', type=str, required=True, help='Path to the JSON file')
+    parser.add_argument('-s', '--style', type=str, required=True, default='tree', help='Style to be applied')
+    parser.add_argument('-i', '--icon', type=str, required=True, default='poker', help='Icon family to be used')
+    parser.add_argument('-c', '--config', type=str, required=False, default='', help='Path to the JSON file including other icon families')
+    
+    args = parser.parse_args()
+    
+    try:
+        fje = FunnyJsonExplorer(args.style,args.icon,args.config)
+        fje._load(args.file)
+        fje.build()
+        fje.show()
+
+    except FileNotFoundError:
+        print(f"Error: The file {args.file} was not found.")
+        sys.exit(1)
+    except json.JSONDecodeError:
+        print(f"Error: The file {args.file} is not a valid JSON file.")
+        sys.exit(1)
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,295 @@
+{
+    "Africa": {
+      "Nigeria": {
+        "Lagos": {
+          "Ikeja": {
+            "District_1": "South",
+            "District_2": "South",
+            "District_3": "North"
+          },
+          "Lekki": {
+            "District_1": "North",
+            "District_2": "West",
+            "District_3": "North",
+            "District_4": "West"
+          },
+          "Surulere": {
+            "District_1": "West",
+            "District_2": "West",
+            "District_3": "West"
+          }
+        },
+        "Abuja": {
+          "Garki": {
+            "District_1": "North",
+            "District_2": "North"
+          },
+          "Wuse": {
+            "District_1": "West",
+            "District_2": "East",
+            "District_3": "North",
+            "District_4": "South"
+          },
+          "Asokoro": {
+            "District_1": "North",
+            "District_2": "East",
+            "District_3": "Central",
+            "District_4": "West"
+          }
+        },
+        "Kano": {
+          "Fagge": {
+            "District_1": "South",
+            "District_2": "North"
+          },
+          "Gwale": {
+            "District_1": "East",
+            "District_2": "East",
+            "District_3": "North"
+          },
+          "Dala": {
+            "District_1": "South",
+            "District_2": "North",
+            "District_3": "West",
+            "District_4": "North"
+          }
+        }
+      },
+      "Egypt": {
+        "Cairo": {},
+        "Alexandria": {},
+        "Giza": {}
+      },
+      "South Africa": {
+        "Johannesburg": {},
+        "Cape Town": {},
+        "Durban": {}
+      }
+    },
+    "Asia": {
+      "China": {
+        "Beijing": {
+          "Haidian": {
+            "District_1": "West",
+            "District_2": "North",
+            "District_3": "East",
+            "District_4": "South"
+          },
+          "Chaoyang": {
+            "District_1": "North",
+            "District_2": "East",
+            "District_3": "East",
+            "District_4": "East"
+          },
+          "Xicheng": {
+            "District_1": "North",
+            "District_2": "North"
+          }
+        },
+        "Shanghai": {
+          "Pudong": {
+            "District_1": "North",
+            "District_2": "West",
+            "District_3": "North",
+            "District_4": "West",
+            "District_5": "Central"
+          },
+          "Huangpu": {
+            "District_1": "South",
+            "District_2": "North"
+          },
+          "Jing'an": {
+            "District_1": "Central",
+            "District_2": "West",
+            "District_3": "East",
+            "District_4": "North"
+          }
+        },
+        "Guangzhou": {
+          "Tianhe": {
+            "District_1": "West",
+            "District_2": "North",
+            "District_3": "East",
+            "District_4": "East"
+          },
+          "Yuexiu": {
+            "District_1": "North",
+            "District_2": "Central"
+          },
+          "Liwan": {
+            "District_1": "North",
+            "District_2": "South"
+          }
+        }
+      },
+      "India": {
+        "Delhi": {},
+        "Mumbai": {},
+        "Bangalore": {}
+      },
+      "Japan": {
+        "Tokyo": {},
+        "Osaka": {},
+        "Nagoya": {}
+      }
+    },
+    "Europe": {
+      "Germany": {
+        "Berlin": {},
+        "Hamburg": {},
+        "Munich": {}
+      },
+      "France": {
+        "Paris": {},
+        "Lyon": {},
+        "Marseille": {}
+      },
+      "United Kingdom": {
+        "London": {},
+        "Manchester": {},
+        "Birmingham": {}
+      }
+    },
+    "North America": {
+      "United States": {
+        "California": {
+          "Los Angeles": {
+            "District_1": "West",
+            "District_2": "East",
+            "District_3": "North",
+            "District_4": "South"
+          },
+          "San Francisco": {
+            "District_1": "East",
+            "District_2": "Central"
+          },
+          "San Diego": {
+            "District_1": "South",
+            "District_2": "North"
+          }
+        },
+        "Texas": {
+          "Houston": {
+            "District_1": "East",
+            "District_2": "East",
+            "District_3": "West",
+            "District_4": "North",
+            "District_5": "North"
+          },
+          "Dallas": {
+            "District_1": "East",
+            "District_2": "West"
+          },
+          "Austin": {
+            "District_1": "East",
+            "District_2": "Central",
+            "District_3": "Central",
+            "District_4": "South"
+          }
+        },
+        "New York": {
+          "New York City": {
+            "District_1": "North",
+            "District_2": "North",
+            "District_3": "East"
+          },
+          "Buffalo": {
+            "District_1": "Central",
+            "District_2": "East",
+            "District_3": "Central",
+            "District_4": "East"
+          },
+          "Rochester": {
+            "District_1": "South",
+            "District_2": "North"
+          }
+        }
+      },
+      "Canada": {
+        "Ontario": {},
+        "Quebec": {},
+        "British Columbia": {}
+      },
+      "Mexico": {
+        "Mexico City": {},
+        "Guadalajara": {},
+        "Monterrey": {}
+      }
+    },
+    "South America": {
+      "Brazil": {
+        "São Paulo": {},
+        "Rio de Janeiro": {},
+        "Brasília": {}
+      },
+      "Argentina": {
+        "Buenos Aires": {},
+        "Córdoba": {},
+        "Rosario": {}
+      },
+      "Chile": {
+        "Santiago": {},
+        "Valparaíso": {},
+        "Concepción": {}
+      }
+    },
+    "Australia": {
+      "Australia": {
+        "New South Wales": {
+          "Sydney": {
+            "District_1": "South",
+            "District_2": "Central",
+            "District_3": "West",
+            "District_4": "North",
+            "District_5": "South"
+          },
+          "Newcastle": {
+            "District_1": "Central",
+            "District_2": "East",
+            "District_3": "West",
+            "District_4": "Central",
+            "District_5": "North"
+          },
+          "Wollongong": {
+            "District_1": "Central",
+            "District_2": "South",
+            "District_3": "Central",
+            "District_4": "North"
+          }
+        },
+        "Victoria": {
+          "Melbourne": {
+            "District_1": "Central",
+            "District_2": "Central"
+          },
+          "Geelong": {
+            "District_1": "West",
+            "District_2": "East",
+            "District_3": "Central",
+            "District_4": "South",
+            "District_5": "South"
+          },
+          "Ballarat": {
+            "District_1": "South",
+            "District_2": "North",
+            "District_3": "North"
+          }
+        },
+        "Queensland": {
+          "Brisbane": {
+            "District_1": "South",
+            "District_2": "South",
+            "District_3": "North"
+          },
+          "Gold Coast": {
+            "District_1": "North",
+            "District_2": "East"
+          },
+          "Cairns": {
+            "District_1": "East",
+            "District_2": "East"
+          }
+        }
+      }
+    }
+  }

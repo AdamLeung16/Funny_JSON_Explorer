@@ -1,0 +1,22 @@
+{
+  "weather": {                         
+    "container_icon": "☼",             
+    "leaf_icon": "☁"                                      
+  },
+  "music": {                         
+    "container_icon": "♫",             
+    "leaf_icon": "♪"                                      
+  },
+  "money": {                         
+    "container_icon": "￥",             
+    "leaf_icon": "$"                                      
+  },
+  "arrow": {                         
+    "container_icon": "⇉",             
+    "leaf_icon": "➝"                                      
+  },
+  "heart": {                         
+    "container_icon": "❤",             
+    "leaf_icon": "♡"                                      
+  }
+}
