@@ -42,7 +42,7 @@ style和icon的实现都使用了工厂方法和抽象工厂的结合。
 
 **Icon类**
 
-* 功能：抽象基类，用于风格绘制
+* 功能：抽象基类，用于图标族设置
 * 成员变量：
   * container_icon：中间节点图标
   * leaf_icon：叶节点图标
@@ -165,25 +165,25 @@ fje命令中有可选参数"-c"("--config")，可以传入自定义图标族json
 ```json
 // config/icon.json
 {
-  "weather": {                     
-    "container_icon": "☼",         
-    "leaf_icon": "☁"                                  
+  "weather": {                   
+    "container_icon": "☼",       
+    "leaf_icon": "☁"                                
   },
-  "music": {                     
-    "container_icon": "♫",         
-    "leaf_icon": "♪"                                  
+  "music": {                   
+    "container_icon": "♫",       
+    "leaf_icon": "♪"                                
   },
-  "money": {                     
-    "container_icon": "￥",         
-    "leaf_icon": "$"                                  
+  "money": {                   
+    "container_icon": "￥",       
+    "leaf_icon": "$"                                
   },
-  "arrow": {                     
-    "container_icon": "⇉",         
-    "leaf_icon": "➝"                                  
+  "arrow": {                   
+    "container_icon": "⇉",       
+    "leaf_icon": "➝"                                
   },
-  "heart": {                     
-    "container_icon": "❤",         
-    "leaf_icon": "♡"                                  
+  "heart": {                   
+    "container_icon": "❤",       
+    "leaf_icon": "♡"                                
   }
 }
 ```
